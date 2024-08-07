@@ -31,7 +31,7 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public boolean deleteEmployee(String cccd) {
-        return employeeDAO.deleteEmployee(cccd);
+        return false;
     }
     @Override
     public List<Employee> getEmployeesByName(String name) {

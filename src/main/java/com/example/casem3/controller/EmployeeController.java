@@ -131,14 +131,7 @@ public class EmployeeController extends HttpServlet {
         }
     }
     private void deleteEmployee(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String cccd = req.getParameter("cccd");
-        boolean isDeleted = employeeService.deleteEmployee(cccd);
-        if (isDeleted) {
-            resp.sendRedirect("/employees");
-        } else {
-            req.setAttribute("errorMessage", "Error deleting employee");
-            listEmployee(req, resp);
-        }
+
     }
     private void searchEmployee(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("name");

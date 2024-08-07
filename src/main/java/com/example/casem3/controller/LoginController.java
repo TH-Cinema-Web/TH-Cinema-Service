@@ -33,11 +33,18 @@ public class LoginController extends HttpServlet {
             session.setAttribute("username", username);
             session.setAttribute("role", role);
 
-            if ("ROLE_ADMIN".equals(role)) {
-                resp.sendRedirect("admin");
-            } else {
-                resp.sendRedirect("access-denied.jsp");
+            switch (role) {
+                case "ROLE_ADMIN":
+                    resp.sendRedirect("admin");
+                    break;
+                case "ROLE_MANAGER":
+                    resp.sendRedirect("manager");
+                    break;
+                case "ROLE_USER":
+                    resp.sendRedirect("user");
+                    break;
             }
+
         } else {
             req.setAttribute("errorMessage", "Invalid username or password");
             req.getRequestDispatcher("/login.jsp").forward(req, resp);
