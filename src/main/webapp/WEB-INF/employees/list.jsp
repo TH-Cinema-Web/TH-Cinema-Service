@@ -13,8 +13,16 @@
     <meta charset="UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="${pageContext.request.contextPath}/image/background1.jpg" width="1200" height="300">
+        </a>
+    </div>
+</nav>
 <div class="container">
     <h2>Employee List</h2>
     <form action="/employees" method="get" class="mb-3">
@@ -51,6 +59,7 @@
         </c:forEach>
         </tbody>
     </table>
+    <a href="/admin-page.jsp" class="btn btn-secondary mt-3">Back to Admin Page</a>
 </div>
 </body>
 </html>

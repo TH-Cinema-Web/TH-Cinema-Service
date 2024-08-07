@@ -19,21 +19,21 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public List<Customer> getCustomerByName(String fullName) {
-        return Collections.emptyList();
+        return customerDAO.getCustomerByName(fullName);
     }
 
     @Override
     public boolean addCustomer(Customer customer) {
-        return false;
+        return customerDAO.addCustomer(customer);
     }
 
     @Override
     public boolean deleteCustomer(String phoneNumber) {
-        return false;
+        return customerDAO.deleteCustomer(phoneNumber);
     }
 
     @Override
     public boolean editCustomer(Customer customer) {
-        return false;
+        return customerDAO.editCustomer(customer);
     }
 }

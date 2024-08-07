@@ -50,8 +50,9 @@
                 <option value="5" ${employee.roleId == 5 ? 'selected' : ''}>ROLE_USER</option>
             </select>
         </div>
-        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="submit" class="btn btn-primary">Update Employee</button>
     </form>
+    <a href="employees?action=list" class="btn btn-secondary mt-3">Back to Employee List</a>
 </div>
 </body>
 </html>
