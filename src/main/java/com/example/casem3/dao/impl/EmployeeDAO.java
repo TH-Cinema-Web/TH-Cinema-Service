@@ -52,7 +52,6 @@ public class EmployeeDAO implements IEmployeeDAO {
                 String employeeName = resultSet.getString("name");
                 String email = resultSet.getString("email");
                 String userName = resultSet.getString("username");
-                // int roleId = resultSet.getInt("role_id");
                 employees.add(new Employee(cccd, phoneNumber, employeeName, email, userName));
             }
         } catch (SQLException e) {

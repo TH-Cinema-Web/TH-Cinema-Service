@@ -34,9 +34,9 @@ public class LoginController extends HttpServlet {
             session.setAttribute("role", role);
 
             if ("ROLE_ADMIN".equals(role)) {
-                resp.sendRedirect("admin");
+                resp.sendRedirect("admin-page.jsp");
             } else {
-                resp.sendRedirect("access-denied.jsp");
+                resp.sendRedirect("home-page.jsp");
             }
         } else {
             req.setAttribute("errorMessage", "Invalid username or password");

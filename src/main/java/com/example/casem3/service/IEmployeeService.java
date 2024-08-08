@@ -7,8 +7,8 @@ import java.util.List;
 public interface IEmployeeService {
     List<Employee> getAllEmployees();
     Employee getEmployeeByCccd(String cccd);
-    List<Employee> getEmployeesByName(String name); // Thêm phương thức này
+    List<Employee> getEmployeesByName(String name);
     boolean addEmployee(Employee employee, String password);
-    boolean editEmployee(Employee employee, String password); // Thêm tham số password
+    boolean editEmployee(Employee employee, String password);
     boolean deleteEmployee(String cccd);
 }
