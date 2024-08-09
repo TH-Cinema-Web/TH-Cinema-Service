@@ -26,17 +26,10 @@
                 <div class="card-body">
                     <%
                         String successMessage = (String) request.getAttribute("successMessage");
-                        String errorMessage = (String) request.getAttribute("errorMessage");
                         if (successMessage != null) {
                     %>
                     <div class="alert alert-success">
                         <%= successMessage %>
-                    </div>
-                    <%
-                    } else if (errorMessage != null) {
-                    %>
-                    <div class="alert alert-danger">
-                        <%= errorMessage %>
                     </div>
                     <%
                         }

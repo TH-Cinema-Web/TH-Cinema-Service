@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet (name="UserController", value="/user")
+@WebServlet(name = "UserController", value = "/user")
 public class UserController extends HttpServlet {
     private IUserService userService = new UserService();
 
@@ -39,8 +39,8 @@ public class UserController extends HttpServlet {
             RequestDispatcher rd = req.getRequestDispatcher("/login.jsp");
             rd.forward(req, resp);
         } catch (Exception e) {
-            req.setAttribute("errorMessage", "An error occurred while adding the user.");
-            RequestDispatcher rd = req.getRequestDispatcher("/login.jsp");
+            req.setAttribute("errorMessage", "Username already exists, please try a different one.");
+            RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/user/add.jsp");
             try {
                 rd.forward(req, resp);
             } catch (ServletException | IOException ex) {

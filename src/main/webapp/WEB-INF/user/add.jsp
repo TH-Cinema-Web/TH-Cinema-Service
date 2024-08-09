@@ -17,6 +17,16 @@
                     <h2>Register</h2>
                 </div>
                 <div class="card-body">
+                    <%
+                        String errorMessage = (String) request.getAttribute("errorMessage");
+                        if (errorMessage != null) {
+                    %>
+                    <div class="alert alert-danger">
+                        <%= errorMessage %>
+                    </div>
+                    <%
+                        }
+                    %>
                     <form id="registerForm" action="user?action=add" method="post" onsubmit="return validateForm()">
                         <div class="mb-3">
                             <label for="username" class="form-label">Username</label>
